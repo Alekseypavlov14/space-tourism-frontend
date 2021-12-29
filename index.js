@@ -4,8 +4,8 @@ const path = require('path')
 
 const server = http.createServer((req, res) => {
 
-    // let filePath = path.join(__dirname, 'client', 'starter-code' + req.url)
-    if (req.url === 'https://space-tourism-mentor.herokuapp.com/') filePath = path.join(__dirname, 'client', 'starter-code', 'index.html')
+    let filePath = path.join(__dirname, 'client', 'starter-code' + req.url)
+    if (req.url === '/') filePath += 'index.html'
 
     if (/svg$/.test(req.url)){
 

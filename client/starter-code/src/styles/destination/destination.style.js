@@ -17,7 +17,7 @@ links.forEach((el, i) => {
     el.onclick = (e) => {
         e.preventDefault()
 
-        fetch('https://space-tourism-mentor.herokuapp.com/client/starter-code/data.json').then((res) => {
+        fetch('http://127.0.0.1:5500/client/starter-code/data.json').then((res) => {
             return Promise.resolve(res)
         }).then(response => {
             return response.json()
