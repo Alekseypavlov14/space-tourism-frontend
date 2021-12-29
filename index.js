@@ -5,7 +5,7 @@ const path = require('path')
 const server = http.createServer((req, res) => {
 
     let filePath = path.join(__dirname, 'client', 'starter-code' + req.url)
-    if (req.url === '/') filePath += 'index.html'
+    if (req.url === '/') filePath += '/index.html'
 
     if (/svg$/.test(req.url)){
 
